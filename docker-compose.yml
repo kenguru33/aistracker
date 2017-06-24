@@ -4,9 +4,9 @@ services:
     build: ./ais-data-fetcher
     image: ais-data-fetcher
     environment:
-      - URL=http://ais.rs.no/aktive_pos.jsonx
+      - URL=http://ais.rs.no/aktive_pos.jsonxx
   ais-data-fetcher2:
     build: ./ais-data-fetcher
     image: ais-data-fetcher
     environment:
-      - URL=http://ais.rs.no/aktive.jsonx
+      - URL=http://ais.rs.no/aktive.jsonxx
