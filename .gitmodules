@@ -1,0 +1,3 @@
+[submodule "ais-data-fetcher"]
+	path = ais-data-fetcher
+	url = https://github.com/kenguru33/ais-data-fetcher.git
