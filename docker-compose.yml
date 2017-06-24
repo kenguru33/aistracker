@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ais-data-fetcher-1:
+    build: ./ais-data-fetcher
+    image: aisdatafetcher
+    environment:
+      - URL=https://ais.rs.no/aktive_pos.json
+  ais-data-fetcher-2:
+    build: ./ais-data-fetcher
+    image: aisdatafetcher
+    environment:
+      - URL=htps://ais.rs.no/aktive.json
