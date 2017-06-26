@@ -2,9 +2,13 @@ version: '3'
 services:
   ais-data-fetcher1:
     image: kenguru33/ais-data-fetcher
+    deploy:
+      replicas: 1
     environment:
       - URL=http://ais.rs.no/aktive_pos.json
   ais-data-fetcher2:
     image: kenguru33/ais-data-fetcher
+    deploy:
+      replicas: 1
     environment:
       - URL=http://ais.rs.no/aktive.json

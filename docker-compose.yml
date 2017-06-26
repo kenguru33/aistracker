@@ -4,9 +4,11 @@ services:
     build: ./ais-data-fetcher
     image: ais-data-fetcher
     environment:
-      - URL=http://ais.rs.no/aktive_pos.jsonxx
+      - URL=http://ais.rs.no/aktive_pos.json
   ais-data-fetcher2:
     build: ./ais-data-fetcher
     image: ais-data-fetcher
     environment:
-      - URL=http://ais.rs.no/aktive.jsonxx
+      - URL=http://ais.rs.no/aktive.json
+  rabbitmq:
+    image: rabbitmq
