@@ -10,5 +10,3 @@ services:
     image: ais-data-fetcher
     environment:
       - URL=http://ais.rs.no/aktive.json
-  eclipse-mosquitto:
-    image: eclipse-mosquitto
