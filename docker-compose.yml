@@ -1,14 +1,14 @@
-version: '3'
+version: '3.3'
 services:
   ais-data-fetcher1:
-    build: ./ais-data-fetcher
     image: ais-data-fetcher
+    build: ./ais-data-fetcher
     environment:
       - URL=http://ais.rs.no/aktive_pos.json
-  ais-data-fetcher2:
-    build: ./ais-data-fetcher
-    image: ais-data-fetcher
-    environment:
-      - URL=http://ais.rs.no/aktive.json
-  eclipse-mosquitto:
-    image: eclipse-mosquitto
+      - MESSAGE_BROKER_URL=amqp://message-broker
+    depends_on:
+      - message-broker
+  message-broker:
+    image: rabbitmq:3-management
+    ports:
+      - 8080:15672

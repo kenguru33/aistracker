@@ -1,12 +1,10 @@
-version: '3'
+version: '3.3'
 services:
   ais-data-fetcher1:
-    build: ./ais-data-fetcher
-    image: ais-data-fetcher
     environment:
       - URL=http://ais.rs.no/aktive_pos.json
-  ais-data-fetcher2:
-    build: ./ais-data-fetcher
-    image: ais-data-fetcher
-    environment:
-      - URL=http://ais.rs.no/aktive.json
+    volumes:
+      - ./ais-data-fetcher/src/:/app/src
+    command: nodemon --inspect-brk=0.0.0.0:5858 /app/src/app.js
+    ports:
+      - "5858:5858"
