@@ -5,6 +5,6 @@ services:
       - URL=http://ais.rs.no/aktive_pos.json
     volumes:
       - ./ais-data-fetcher/src/:/app/src
-    command: nodemon --inspect-brk=0.0.0.0:5858 /app/src/app.js
+    command: nodemon --inspect=0.0.0.0:5858 /app/src/app.js
     ports:
       - "5858:5858"
